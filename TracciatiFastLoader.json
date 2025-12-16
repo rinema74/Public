@@ -1,5 +1,45 @@
 [
   {
+    "nome_tracciato": "Csv per Selezioni con sole aziende",
+    "campi": {
+      "Codice azienda": {
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 6,
+        "obbligatorio": true,
+        "sintassi": ""
+      },
+      "Denominazione": {
+        "tipologia": "ORIGINALE",
+        "lunghezza": 20,
+        "obbligatorio": true,
+        "sintassi": ""
+      }
+    }
+  },
+  {
+    "nome_tracciato": "Csv per selezioni con azienda e dipendente",
+    "campi": {
+      "Codice azienda": {
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 6,
+        "obbligatorio": true,
+        "sintassi": ""
+      },
+      "Denominazione": {
+        "tipologia": "ORIGINALE",
+        "lunghezza": 20,
+        "obbligatorio": true,
+        "sintassi": ""
+      },
+      "Codice dipendente": {
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 7,
+        "obbligatorio": true,
+        "sintassi": ""
+      }
+    }
+  },
+  {
     "nome_tracciato": "Tracciato Caricamento Voci - Rif. Versione Doc. Tecnico Zucchetti 30/04/2023",
     "campi": {
       "CodiceAzienda": {
@@ -354,5 +394,131 @@
         "lunghezza": 4
       }
     }
+  },
+  {
+    "nome_tracciato": "Dati Organico - Attività/Lavorazione",
+    "campi": [
+      {
+        "nome": "Cod.azienda/ente",
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 6,
+        "obbligatorio": true,
+        "sintassi": "numero della ditta"
+      },
+      {
+        "nome": "Cod. dipendente",
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 7,
+        "obbligatorio": true,
+        "sintassi": "codice dipendente"
+      },
+      {
+        "nome": "Data inizio validità",
+        "tipologia": "ORIGINALE",
+        "lunghezza": 8,
+        "obbligatorio": true,
+        "sintassi": "AAAAMMGG"
+      },
+      {
+        "nome": "Cod. ricezione",
+        "tipologia": "KOSTANTE",
+        "lunghezza": 12,
+        "obbligatorio": false,
+        "kostante": "H1PAGHEWEBAN",
+        "sintassi": "costante di sistema"
+      },
+      {
+        "nome": "Cod.dato",
+        "tipologia": "KOSTANTE",
+        "lunghezza": 12,
+        "obbligatorio": false,
+        "kostante": "IDACTIVITY",
+        "sintassi": "Rappresenta il nome del campo presente sul file da importare"
+      },
+      {
+        "nome": "Riferimento dato",
+        "tipologia": "Spazi davanti al valore",
+        "lunghezza": 20,
+        "obbligatorio": false,
+        "sintassi": "Il codice riferimento rappresenta la chiave aggiuntiva tipica di tutte le tabelle di tipo detail (griglia)"
+      },
+      {
+        "nome": "Valore",
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 15,
+        "obbligatorio": true,
+        "sintassi": "Rappresenta il valore che deve assumere il campo importato. È utile sapere che: ✓ se il valore di un campo è di tipo alfanumerico ma il suo contenuto è un numero, deve essere allineato a sinistra e preceduto da zeri, se all’interno dell’applicativo HR è codificato in questo modo (es. la qualifica di operaio che corrisponde al codice \"010\" deve essere indicata nello stesso identico modo essendo un campo alfanumerico)"
+      },
+      {
+        "nome": "Spazi",
+        "tipologia": "Spazi davanti al valore",
+        "lunghezza": 25,
+        "obbligatorio": false,
+        "sintassi": "Spazi per chiudere il campo Valore che è lungo 40 char"
+      }
+    ]
+  },
+  {
+    "nome_tracciato": "Dati Organico - Squadra/Gruppo",
+    "campi": [
+      {
+        "nome": "Cod.azienda/ente",
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 6,
+        "obbligatorio": true,
+        "sintassi": "numero della ditta"
+      },
+      {
+        "nome": "Cod. dipendente",
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 7,
+        "obbligatorio": true,
+        "sintassi": "codice dipendente"
+      },
+      {
+        "nome": "Data inizio validità",
+        "tipologia": "ORIGINALE",
+        "lunghezza": 8,
+        "obbligatorio": true,
+        "sintassi": "AAAAMMGG"
+      },
+      {
+        "nome": "Cod. ricezione",
+        "tipologia": "KOSTANTE",
+        "lunghezza": 12,
+        "obbligatorio": false,
+        "kostante": "H1PAGHEWEBAN",
+        "sintassi": "costante di sistema"
+      },
+      {
+        "nome": "Cod.dato",
+        "tipologia": "KOSTANTE",
+        "lunghezza": 12,
+        "obbligatorio": false,
+        "kostante": "IDTEAM",
+        "sintassi": "Rappresenta il nome del campo presente sul file da importare"
+      },
+      {
+        "nome": "Riferimento dato",
+        "tipologia": "Spazi davanti al valore",
+        "lunghezza": 20,
+        "obbligatorio": false,
+        "sintassi": "Il codice riferimento rappresenta la chiave aggiuntiva tipica di tutte le tabelle di tipo detail (griglia)"
+      },
+      {
+        "nome": "Valore",
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 15,
+        "obbligatorio": true,
+        "sintassi": "Rappresenta il valore che deve assumere il campo importato. È utile sapere che: ✓ se il valore di un campo è di tipo alfanumerico ma il suo contenuto è un numero, deve essere allineato a sinistra e preceduto da zeri, se all’interno dell’applicativo HR è codificato in questo modo (es. la qualifica di operaio che corrisponde al codice \"010\" deve essere indicata nello stesso identico modo essendo un campo alfanumerico)"
+      },
+      {
+        "nome": "Spazi",
+        "tipologia": "Spazi davanti al valore",
+        "lunghezza": 25,
+        "obbligatorio": false,
+        "sintassi": "Spazi per chiudere il campo Valore che è lungo 40 char"
+      }
+    ]
   }
 ]
