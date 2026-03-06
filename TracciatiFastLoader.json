@@ -520,5 +520,51 @@
         "sintassi": "Spazi per chiudere il campo Valore che è lungo 40 char"
       }
     ]
+  },
+  {
+    "nome_tracciato": "Ricezione Verticale Azienda Campi aggiuntivi",
+    "campi": [
+      {
+        "nome": "Codice Azienda",
+        "tipologia": "Zeri davanti al valore",
+        "lunghezza": 6,
+        "obbligatorio": true
+      },
+      {
+        "nome": "Data inizio Validità",
+        "tipologia": "ORIGINALE",
+        "lunghezza": 8,
+        "obbligatorio": true,
+        "sintassi": "Data AAAAmmGG"
+      },
+      {
+        "nome": "Codice Ricezione",
+        "tipologia": "KOSTANTE",
+        "lunghezza": 12,
+        "obbligatorio": false,
+        "kostante": "HRANAGRACOMP"
+      },
+      {
+        "nome": "Codice Campo",
+        "tipologia": "Spazi dietro al valore",
+        "lunghezza": 12,
+        "obbligatorio": true,
+        "sintassi": "Codice campo dati aggiuntivi"
+      },
+      {
+        "nome": "Riferimento dato",
+        "tipologia": "KOSTANTE",
+        "lunghezza": 10,
+        "obbligatorio": false,
+        "kostante": "",
+        "sintassi": "Tutti spazi"
+      },
+      {
+        "nome": "Valore del campo",
+        "tipologia": "Spazi dietro al valore",
+        "lunghezza": 40,
+        "obbligatorio": true
+      }
+    ]
   }
 ]
